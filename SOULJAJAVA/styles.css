@@ -1,0 +1,13 @@
+main{
+	height: 4000px;
+}
+
+header {
+	position: fixed;
+	top: 60px;
+	padding-left: 40%;
+}
+
+header img{
+	border-radius: 50%;
+}
