@@ -9,7 +9,7 @@ $ (function () {
 	$("#dropActivate").click( function(){
 		
 		state = !state;
-		console.log(state);
+		console.log("state");
 		
 		//if = odd click (open), else = even click (closed)
 
@@ -25,6 +25,23 @@ $ (function () {
 			$("#contactButton").hide();
 		}
 	});
+
+
+
+	// desktop activate navbar on hover
+
+	
+
+	 $(".desktopDrop").hover( function () {
+     	$(".drop").show();
+    	$("#dropActivate a").css("color", "#808080");
+    	}, 
+    	function () {
+      		$(".drop").hide();
+      		$("#dropActivate a").css("color", "#A9A9A9");
+    }
+  		);
+
 
 
 });

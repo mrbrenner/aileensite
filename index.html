@@ -7,6 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<div class="slick">
+		<link rel="stylesheet" type="text/css" href="slick-file/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick-file/slick/slick-theme.css"/>
+		</div>
 	</head>
 	<body>
 		
@@ -15,18 +19,18 @@
 		
 			<nav class="nav">
 			<ul>
-				<div class="mobileDrop">
+				<div class="mobileDrop desktopDrop">
 				
 				<div id="dropActivate">
 				<li class="navItems"><a>works</a></li>
 				</div>
-
+				<div class="dropColumn">
 				<li class="drop"><a href="">drawings</a></li>
 
 				<li class="drop"><a href="">videos</a></li>
 
 				<li class="drop"><a href="">fashion</a></li>
-
+				</div>
 				</div>
 
 				<div id="contactButton"></div>
@@ -40,28 +44,60 @@
 		
 
 		<div class="slide-and-nav">
+			
 			<div class="slide-nav">
 				<!-- buttons here -->
 			</div>
+
 			<div class="slide">
-				<div>
+				
+				<div class="slideImage">
 				<a href=""><img src="images/aileen.jpg" alt="" /></a>
 				</div>
 
-				<div>
+				<div class="slideImage">
 				<a href=""> <img src="images/stuff.jpg" alt="" /> </a>
 				</div>
 
-				<div><a href=""> <img src="images/figure.jpg" alt="" /> 
-				</a>
+				<div class="slideImage"><a href=""> <img src="images/figure.jpg" alt="" /> </a>
 				</div>
-				<div><a href=""> <img src="images/doodle.jpg" alt="" /> </a>
+
+				<div class="slideImage"><a href=""> <img src="images/doodle.jpg" alt="" /> </a>
 				</div>
+
 			</div>
+
 		</div>
 		
 		</main>
 
 	<script src="js/main.js"></script>
+	
+	<!-- slick -->
+	<div class="slick">
+	<script type="text/javascript" src="slick-file/slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+    	
+    	$(document).ready(function(){ 
+    		
+    		$(".slide").slick({
+        	 dots: false,
+        	infinite: true,
+        	speed: 300,
+        	slidesToShow: 1,
+        	slidesToScroll: 1,
+        	swipe: true
+          	// adaptiveHeight: true,
+          	// centerMode: true,
+          	// centerPadding: '500px'
+   			});
+
+    	$('.single-item').slick();
+    });
+  
+  </script>
+  </div>
+
 	</body>
 </html>
