@@ -6,11 +6,7 @@
 	    <meta name="description" content="some project">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<div class="slick">
-		<link rel="stylesheet" type="text/css" href="slick-file/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick-file/slick/slick-theme.css"/>
-		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>		
 	</head>
 	<body>
 		
@@ -18,24 +14,26 @@
 			<h1><a href="index.html">Aileen Kim</a></h1>
 		
 			<nav class="nav">
-			<ul>
+			<div class="drop-down-nav">
 				<div class="mobileDrop desktopDrop">
 				
-				<div id="dropActivate">
-				<li class="navItems"><a>works</a></li>
-				</div>
-				<div class="dropColumn">
-				<li class="drop"><a href="">drawings</a></li>
+					<div id="dropActivate">
+						<div class="navItems"><a>works</a></div>
+					</div>
+					
+					<div class="dropColumn">
+						<div class="drop"><a href="">drawings</a></div>
 
-				<li class="drop"><a href="">videos</a></li>
+						<div class="drop"><a href="">videos</a></div>
 
-				<li class="drop"><a href="">fashion</a></li>
-				</div>
+						<div class="drop"><a href="">fashion</a></div>
+					</div>
+				
 				</div>
 
 				<div id="contactButton"></div>
-				<li class="navItems"><a href="contact/index.html">contact</a></li>
-			</ul>
+				<div class="navItems"><a href="contact/index.html">contact</a></div>
+			</div>
 			</nav>
 		</header>
 
@@ -46,10 +44,10 @@
 		<div class="slide-and-nav">
 			
 			<div class="slide-nav">
-				<!-- buttons here -->
+			<button id="previous">previous</button>
 			</div>
 
-			<div class="slide">
+			<div class="slide siema">
 				
 				<div class="slideImage">
 				<a href=""><img src="images/aileen.jpg" alt="" /></a>
@@ -64,7 +62,10 @@
 
 				<div class="slideImage"><a href=""> <img src="images/doodle.jpg" alt="" /> </a>
 				</div>
+			</div>
 
+			<div class="slide-nav">
+			<button id="next">next</button>
 			</div>
 
 		</div>
@@ -73,30 +74,38 @@
 
 	<script src="js/main.js"></script>
 	
-	<!-- slick -->
-	<div class="slick">
-	<script type="text/javascript" src="slick-file/slick/slick.min.js"></script>
+	<!-- siema -->
+	
+	<script src="siema/siema.min.js"></script>
+	
+	<script>
+  		
+	$ (function (){
+	  		
+	  	var mySiema = new Siema({
+			  selector: '.siema',
+			  duration: 500,
+			  easing: 'ease-out',
+			  perPage: 1,
+			  startIndex: 0,
+			  draggable: false,
+			  threshold: 20,
+			  loop: true,
+			  onInit: () => {},
+			  onChange: () => {}
+			});
 
-	<script type="text/javascript">
-    	
-    	$(document).ready(function(){ 
-    		
-    		$(".slide").slick({
-        	dots: false,
-        	infinite: true,
-        	speed: 300,
-        	slidesToShow: 1,
-        	slidesToScroll: 1,
-        	// swipe: true
-          	adaptiveHeight: true,
-          	// centerMode: true,
-          	// centerPadding: '500px'
-   			});
 
-    	$('.single-item').slick();
-    });
-  
-  </script>
+	$("#next").click(function(){
+		mySiema.next();
+	});
+
+	$("#previous").click(function (){
+		mySiema.prev();
+	})
+			});
+	</script>
+
   </div>
 
 	</body>
