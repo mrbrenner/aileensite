@@ -78,7 +78,7 @@ ul{
 	.slide {
 
 		width: 100%;
-		max-height: 65vw;
+		max-height: 70vw;
 		overflow: hidden;
 		
 
@@ -96,6 +96,16 @@ ul{
 
 	.slide-nav {
 		display: none;
+	}
+	
+
+/*----- collages page*/
+
+	#collageTop {
+		margin-left: 3vw;
+		color: #808080;
+		font-size: 1.3em;
+		font-weight: lighter;
 	}
 
 /*------- contact content */
@@ -161,7 +171,12 @@ ul{
 	
 	/*------- title */
 	
+	header {
+		font-size: 2em;
+	}
+
 	h1 {
+		font-size: 2em;
 		margin-bottom: 1vw;
 	}
 
