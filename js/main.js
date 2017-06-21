@@ -39,9 +39,6 @@
     	function () {
       		$(".drop").hide();
       		$("#dropActivate a").css("color", "#A9A9A9");
-    }
-  		);
-
-
+    });
 
 });
