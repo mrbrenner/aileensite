@@ -68,16 +68,34 @@ ul{
 	/*font-style: italic;*/
 }
 
-/*-------- front-page-images */
+/*----- slideshow*/
 
-.slide img {
-	width: 100%;
-	height: auto;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-	display: block;
-}
+	main {
+		margin-top: 30vw;
+	}
 
+	.slide {
+
+		width: 95vw;
+		max-height: 65vw;
+		overflow: hidden;
+		
+
+	}
+
+	.slide img {
+		width: 100%;
+	}
+
+	.slide-and-nav {
+    	display: flex;
+    	width: 100%;
+    	justify-content: center;}
+
+
+	.slide-nav {
+		display: none;
+	}
 
 /*------- contact content */
 
@@ -103,12 +121,14 @@ ul{
 
 
 /*-------- tablet*/
-@media (min-width: 600px) {
+@media (max-width: 1024px) and (min-width: 600px) {
 
 	
 	main {
 		margin-top: 20vw;
 	}
+
+	/*----- slideshow*/
 
 	.slide {
 
@@ -217,7 +237,6 @@ ul{
 		overflow: hidden;
 		}
 
-	}
 
 	.slide img {
 		width: 100%;
@@ -226,9 +245,10 @@ ul{
 	.slide-and-nav {
     	display: flex;
     	width: 100%;
-    	justify-content: center;}
-
+    	justify-content: center;
+    }
 	.slide-nav {
+		display: block;
 		align-self: center;
 	}
 
@@ -240,7 +260,6 @@ ul{
 		background-color: #FFC0CB;
 		font-size: 2em;
 		color: #a9a9a9;
-		font-weight: light;
 	}
 
 	button:hover {
