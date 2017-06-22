@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Aileen Kim</title>
+		<meta charset="utf-8">
+	    <meta name="description" content="some project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../../css/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>		
+	</head>
+	<body>
+
+		<header>
+			<h1><a href="../../../index.html">Aileen Kim</a></h1>
+		
+			<nav class="nav">
+			<div class="drop-down-nav">
+				<div class="mobileDrop desktopDrop">
+				
+						<div class="navItems dropActivate"><a>works</a></div>
+					
+					<div class="dropColumn">
+						<div class="drop"><a href="../index.html">drawings</a></div>
+
+						<div class="drop"><a href="../../collages/index.html">collages</a></div>
+
+						<div class="drop"><a href="../../video/index.html">video</a></div>
+					</div>
+				
+				</div>
+
+				<div id="contactButton"></div>
+				<div class="navItems"><a href="../../../contact/index.html">contact</a></div>
+			</div>
+			</nav>
+		</header>
+
+		<main>
+
+
+		
+			<p>
+				<div id="drawingTitle">drawings:</div>
+				<div class="drawingTop">
+					<div class="proj"><a href="../index.html">doodles</a></div>
+					<div class="proj"><a href="../figures/index.html">figures</a></div>
+					<div class="proj selected">portraits</div>
+					<div class="proj"><a href="../still-life/index.html">stills</a></div>
+					</div>
+
+			</p>
+
+			<div class="slide-and-nav">
+			
+			<div class="slide-nav">
+			<button id="previous"><</button>
+			</div>
+						<div class="slide siema">
+				
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img1.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img2.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img3.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img4.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img5.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img6.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img7.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img8.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img9.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img10.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img11.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img12.jpg" alt="" />
+				</div>
+
+				<div class="slideImage">
+				<img src="../../../images/drawings/portraits/img13.jpg" alt="" />
+				</div>
+				
+			</div>
+
+			<div class="slide-nav">
+			<button id="next">></button>
+			</div>
+
+		</div>
+
+		</main>
+
+		<script src="../../../js/main.js"></script>
+
+		<!-- siema -->
+	
+	<script src="../../../siema/siema.min.js"></script>
+	
+	<script>
+  		
+	$ (function (){
+	  		
+	  	var mySiema = new Siema({
+			  selector: '.siema',
+			  duration: 500,
+			  easing: 'ease-out',
+			  perPage: 1,
+			  startIndex: 0,
+			  draggable: true,
+			  threshold: 20,
+			  loop: false,
+			  onInit: () => {},
+			  onChange: () => {}
+			});
+
+
+	$("#next").click(function(){
+		mySiema.next();
+	});
+
+	$("#previous").click(function (){
+		mySiema.prev();
+	})
+
+			});
+	</script>
+
+  </div>
+
+	</body>
